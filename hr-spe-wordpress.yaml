@@ -245,7 +245,7 @@ spec:
     ## For minikube, set this to NodePort, elsewhere use LoadBalancer or ClusterIP
     ##
     service:
-      type: LoadBalancer
+      type: NodePort
       ## HTTP Port
       ##
       port: 80
@@ -266,8 +266,8 @@ spec:
       ##   https: <to set explicitly, choose port between 30000-32767>
       ##   metrics: <to set explicitly, choose port between 30000-32767>
       nodePorts:
-        http: ""
-        https: ""
+        http: "32710"
+        https: "32711"
         metrics: ""
       ## Enable client source IP preservation
       ## ref http://kubernetes.io/docs/tasks/access-application-cluster/create-external-load-balancer/#preserving-the-client-source-ip
